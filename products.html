@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/products.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css" />
+
+    <!-- Page Logo -->
+    <link rel="icon" href="assets/Images/ai-logo-2.png" />
+    <link rel="apple-touch-icon" href="assets/Images/ai-logo-2.png" />
+    <title>ToothVision: Our Product</title>
+  </head>
+  <body>
+    <!-- === START SCROLL TO TOP BUTTON === -->
+    <div id="scroll-top">&#8593;</div>
+    <!-- === END SCROLL TO TOP BUTTON === -->
+    <!-- === START HEADER === -->
+    <header></header>
+    <!-- === END HEADER === -->
+
+    <main>
+      <!-- === START HERO SECTION === -->
+      <section id="hero">
+        <div class="container">
+          <div class="overlay"></div>
+          <div class="text">
+            <h1>our products is here</h1>
+            <span>AI for you, with you</span>
+          </div>
+        </div>
+        <video autoplay loop muted>
+          <source src="assets/Images/Upload.mp4" type="video/mp4" />
+        </video>
+      </section>
+      <!-- === END HERO SECTION === -->
+
+      <!-- === START OUR PRODUCTS === -->
+      <section class="section" id="products">
+        <div class="container">
+          <h2 class="title">our product</h2>
+          <!-- <p class="bottom-title">
+            Our cutting-edge technology is consistent, reliable, and most
+            importantly, real-time. After a dental X-Ray is uploaded, it is
+            analyzed then, the application annotates and highlights the details
+            and locations of dental problems, thus giving dentists a second
+            opinion, which allows for a more comprehensive, and a more accurate
+            diagnosis. In the case of dentists, dental AI will make the
+            diagnosis procedure more accurate, more reliable, and faster, it
+            will bring to the dentist’s attention diseases they might have
+            missed. Dental AI will also reshape dental students’ education as it
+            would indulge said students with technology and open their eyes to
+            state-of-the-art dental applications. Insurance companies stand to
+            gain so many advantages, as it will help streamline the processing
+            of claims reducing human dependency for this task, it also provides
+            precise diagnoses making it reliable.
+          </p> -->
+          <div class="uploading-images">
+            <img
+              class="current-img"
+              src="assets/Images/ai-logo-2.png"
+              alt="ToothVision"
+            />
+            <div class="input">
+              <input id="upload-input" type="file" multiple="multiple" />
+              <label for="upload-input">Upload an image</label>
+            </div>
+            <div class="uploaded-image">
+              <div class="choosing-models">
+                <div class="list-diseases hidden">
+                  <div>
+                    <input
+                      class="disease"
+                      type="checkbox"
+                      name="caries"
+                      id="caries"
+                      data-disease-name="caries"
+                      data-color="red"
+                    />
+                    <label for="caries">caries</label>
+                  </div>
+                  <div>
+                    <input
+                      class="disease"
+                      type="checkbox"
+                      name="periapical lesion"
+                      id="periapical-lesion"
+                      data-disease-name="periapical lesion"
+                      data-color="green"
+                    />
+                    <label for="periapical-lesion">periapical lesion</label>
+                  </div>
+                  <div>
+                    <input
+                      class="disease"
+                      type="checkbox"
+                      name="root canal treatment"
+                      id="root-canal-treatment"
+                      data-disease-name="root canal treatment"
+                      data-color="yellow"
+                    />
+                    <label for="root-canal-treatment"
+                      >root canal treatment</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      class="disease"
+                      type="checkbox"
+                      name="recurrent caries"
+                      id="recurrent-caries"
+                      data-disease-name="recurrent caries"
+                      data-color="blue"
+                    />
+                    <label for="recurrent-caries">recurrent caries</label>
+                  </div>
+                  <div>
+                    <input
+                      class="disease"
+                      type="checkbox"
+                      name="remaining root"
+                      id="remaining-root"
+                      data-disease-name="remaining root"
+                      data-color="orange"
+                    />
+                    <label for="remaining-root">remaining root</label>
+                  </div>
+                  <div>
+                    <input
+                      class="disease"
+                      type="checkbox"
+                      name="URCT"
+                      id="URCT"
+                      data-disease-name="remaining root"
+                      data-color="orangered"
+                    />
+                    <label for="URCT">URCT</label>
+                  </div>
+                  <div>
+                    <input
+                      class="disease"
+                      type="checkbox"
+                      name="crown"
+                      id="crown"
+                      data-disease-name="crown"
+                      data-color="black"
+                    />
+                    <label for="crown">crown</label>
+                  </div>
+                </div>
+
+                <!-- <div class="waiting-data">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div> -->
+
+                <!-- <h2 class="image-error">No Disease Was Found</h2> -->
+
+                <!-- <img
+                    class="selected-image"
+                    src="assets/Images/hero-image-01.jpg"
+                    alt="Tooth Vision"
+                  /> -->
+                <!-- </div> -->
+                <!-- <div class="diseases-places"> -->
+                <!--    <div class="place"></div> -->
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- === END OUR PRODUCTS === -->
+    </main>
+
+    <!-- === START FOOTER === -->
+    <footer></footer>
+    <!-- === END FOOTER === -->
+    <script src="script.js"></script>
+    <script src="diseasesList.js"></script>
+  </body>
+</html>
