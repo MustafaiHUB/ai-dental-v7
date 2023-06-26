@@ -310,7 +310,6 @@ footer .container .footer-top {
 }
 footer .container .footer-top img {
   height: 150px;
-  filter: invert(1);
 }
 footer .container .footer-top .links {
   display: flex;
