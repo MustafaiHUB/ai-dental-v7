@@ -77,6 +77,10 @@
   padding: 20px 0;
   color: var(--light-color);
   cursor: pointer;
+  transition: var(--transition-5m);
+}
+#products .container .uploading-images .input label:hover {
+  box-shadow: 0 0 10px 0 #333;
 }
 #products .container .uploading-images .images-uploaded > div {
   display: flex;

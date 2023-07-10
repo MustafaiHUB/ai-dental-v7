@@ -55,13 +55,6 @@ class Products {
             <div class="dot"></div>
         </section>
         `;
-        // const loadingHTML = `
-        // <div class="waiting-data">
-        //     <span></span>
-        //     <span></span>
-        //     <span></span>
-        // </div>
-        // `;
         this.choosingModels.insertAdjacentHTML('beforeend', loadingHTML);
 
         this.currentImage.src = URL.createObjectURL(imagesName);
@@ -76,15 +69,29 @@ class Products {
     }
     async JSONcall1(imagesName) {
         const formData = new FormData();
+        console.log(imagesName);
         formData.append("image", imagesName)
         try {
 
             // response will take the fastest response between the fetching and 2 and half minutes
-            const res = await Promise.race([fetch('https://lobster-app-r8jem.ondigitalocean.app/upload/', {
+
+            // const http = new XMLHttpRequest();
+            // const url = 'http://dentalvision.ju.edu.jo/';
+            // http.open('POST', url, true);
+            // http.send(formData);
+            // console.log(http);
+            const res = await Promise.race([fetch('http://dentalvision.ju.edu.jo/upload/', {
                 method: 'POST',
                 body: formData,
-            }), this._setTimeOut(150)]);
+            }), this._setTimeOut(120)]);
+            console.log(res);
+
+            // const res = await Promise.race([fetch('https://lobster-app-r8jem.ondigitalocean.app/upload/', {
+            //     method: 'POST',
+            //     body: formData,
+            // }), this._setTimeOut(150)]);
             if (!res.ok) {
+                console.log(res);
                 this.clearInput();
                 const noDiseaseHTML = `
                     <h2 class="image-error">Error happened while sending the image ... Please try again!</h2>
@@ -94,9 +101,11 @@ class Products {
 
             else {
                 const data = await res.json();
+                console.log(data);
                 this.JSONcall2(imagesName);
             }
         } catch (err) {
+            // console.log(res);
             this.clearInput();
             const noDiseaseHTML = `
                     <h2 class="image-error">Error happened while sending the image ... Please try again!</h2>
@@ -107,7 +116,8 @@ class Products {
     }
     async JSONcall2(imagesName) {
         try {
-            const res = await Promise.race([fetch('https://lobster-app-r8jem.ondigitalocean.app/v8/', {
+            // const res = await Promise.race([fetch('https://lobster-app-r8jem.ondigitalocean.app/v8/', {
+            const res = await Promise.race([fetch('http://dentalvision.ju.edu.jo/v8/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -115,7 +125,7 @@ class Products {
                 body: JSON.stringify({
                     "filename": imagesName.name
                 }),
-            }), this._setTimeOut(150)]);
+            }), this._setTimeOut(120)]);
             if (!res.ok) {
                 this.clearInput();
                 const noDiseaseHTML = `
